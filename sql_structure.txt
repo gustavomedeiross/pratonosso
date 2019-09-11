@@ -1,0 +1,29 @@
+tables:
+    users
+    recipes
+    integrants
+
+- users: 
+    id
+    name
+    email
+    password_hash
+    created_at
+    updated_at
+
+- recipes
+    id
+    title
+    footnote
+    user_id
+    created_at
+    updated_at
+
+- integrants
+    id
+    title
+    ingredients
+    directions
+    recipe_id
+    created_at
+    updated_at
