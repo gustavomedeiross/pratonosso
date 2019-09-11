@@ -4,26 +4,27 @@ tables:
     integrants
 
 - users: 
-    id
-    name
-    email
-    password_hash
-    created_at
-    updated_at
+    id (INT, Autoincrement, Primary Key)
+    name (VARCHAR 255)
+    email (VARCHAR 255, Unique)
+    password_hash (VARCHAR 255)
+    created_at (DATETIME, current_timestamp())
+    updated_at (DATETIME, current_timestamp())
 
 - recipes
-    id
-    title
-    footnote
-    user_id
-    created_at
-    updated_at
+    id (INT, Autoincrement, Primary Key)
+    title (VARCHAR 255)
+    footnote (TEXT)
+    user_id (INT, Index) -> users.id
+    created_at (DATETIME, current_timestamp())
+    updated_at (DATETIME, current_timestamp())
 
 - integrants
-    id
-    title
-    ingredients
-    directions
-    recipe_id
-    created_at
-    updated_at
+    id (INT, Autoincrement, Primary Key)
+    title (VARCHAR 255)
+    ingredients (TEXT)
+    directions (TEXT)
+    recipe_id (INT, Index) -> recipes.id
+    created_at (DATETIME, current_timestamp())
+    updated_at (DATETIME, current_timestamp())
+ 
