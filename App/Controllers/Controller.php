@@ -1,7 +1,7 @@
 <?php
   class Controller {
-    public $data = [];
-    public $layout = "default";
+    private $data = [];
+    private $layout = "default";
 
     public function set($d) {
         $this->data = array_merge($this->data, $d);

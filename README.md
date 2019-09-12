@@ -9,7 +9,7 @@ Get params through Controller methods:
 
 ```php
 class MyController {
-  method($payload) {
+  public function method($payload) {
     extract($payload);
     // Now I can get the variables set in the routes
   }

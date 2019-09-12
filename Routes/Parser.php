@@ -5,6 +5,11 @@
     private static function parseURL($url) {
       $request_url = str_replace('/pratonosso/', '', $url);
 
+      // Index
+      if (strlen($request_url) === 0) {
+        return '/';
+      }
+
       if ($request_url[strlen($request_url) - 1] === '/') {
         $request_url = substr($request_url, 0, -1);
       }
@@ -52,7 +57,7 @@
       }
     }
 
-    public static function dispatch($route, $class_method) {
+    public static function dispatch($route, $class_method, $is_private) {
       $request_url = self::parseURL($_SERVER['REQUEST_URI']);
 
       $hasParam = self::checkIfHasParams($route);
@@ -67,17 +72,22 @@
           $param_pos = self::checkParamPosition($route);
           $params = self::getParamValue($request_url, $route, $param_name, $param_pos);
 
-          return self::callController($class_method, $params);
+          return self::callController($class_method, $params, $is_private);
         }
       }
 
       // Route does not support params
       if ($request_url === $route) {
-        return self::callController($class_method, null);
+        return self::callController($class_method, null, $is_private);
       }
     }
 
-    private static function callController($class_method, $params) {
+    private static function callController($class_method, $params, $is_private) {
+        if ($is_private)  {
+          AuthMiddleware::verify();
+        } 
+
+
         $class_method = explode('@', $class_method);
         $class = $class_method[0];
         $method = $class_method[1];
