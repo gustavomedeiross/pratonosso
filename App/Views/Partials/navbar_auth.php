@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm navbar-light mb-5">
   <div class="container">
 
-    <a class="navbar-brand" href="/pratonosso/">Prato Nosso</a>
+    <a class="navbar-brand text-muted" href="/pratonosso/">Prato Nosso</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,7 +12,7 @@
           <a class="nav-link" href="/pratonosso/sobre-nos">Sobre</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pratonosso/receita-cadastro">Enviar sua receita</a>
+          <a class="nav-link" href="/pratonosso/receitas/criar">Enviar sua receita</a>
         </li>
 
           <li class="nav-item dropdown">

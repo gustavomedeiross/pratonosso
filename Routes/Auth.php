@@ -1,9 +1,9 @@
 <?php
   class AuthMiddleware {
     public function verify() {
-      if (!isset($_SESSION['user_name']) || !isset($_SESSION['user_email'])) {
+      if (!isset($_SESSION['user_id']) ||  !isset($_SESSION['user_name']) || !isset($_SESSION['user_email'])) {
         session_destroy();
-        header('Location: /pratonosso/');
+        header('Location: /pratonosso/entrar');
       }
     }
   }

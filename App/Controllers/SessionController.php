@@ -23,15 +23,18 @@
         return header('Location: /pratonosso/entrar');
       }
 
+      $user->id = $user_exists->id;
       $user->name = $user_exists->name;
 
+      $_SESSION['user_id'] = $user->id;
       $_SESSION['user_name'] = $user->name;
       $_SESSION['user_email'] = $user->email;
 
-      // Redirect
+      header('Location: /pratonosso/minhas-receitas');
     }
 
     public function delete() {
+      unset($_SESSION['user_id']);
       unset($_SESSION['user_name']);
       unset($_SESSION['user_email']);
 

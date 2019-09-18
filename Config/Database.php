@@ -19,7 +19,7 @@
         self::$db_password = env('DB_PASSWORD');
 
         try {
-          self::$connection = new PDO('mysql:host=' . self::$db_host . ';dbname=' . self::$db_name,
+          self::$connection = new PDO('mysql:host=' . self::$db_host . ';dbname=' . self::$db_name . ';charset=utf8',
           self::$db_username,
           self::$db_password
         );

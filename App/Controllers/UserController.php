@@ -35,7 +35,6 @@
       }
 
       return $user->create();
-
     }
   }
 ?>

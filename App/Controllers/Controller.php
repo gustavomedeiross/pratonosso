@@ -3,8 +3,8 @@
     private $data = [];
     private $layout = "default";
 
-    public function set($d) {
-        $this->data = array_merge($this->data, $d);
+    public function set($variable_name, $d) {
+      $this->data[$variable_name] = $d;
     }
 
     public function render($path_to_view) {

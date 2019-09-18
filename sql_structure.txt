@@ -14,6 +14,7 @@ tables:
 - recipes
     id (INT, Autoincrement, Primary Key)
     title (VARCHAR 255)
+    description (TEXT)
     footnote (TEXT)
     user_id (INT, Index) -> users.id
     created_at (DATETIME, current_timestamp())

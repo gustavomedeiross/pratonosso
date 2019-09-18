@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-light mb-5">
   <div class="container">
 
-    <a class="navbar-brand" href="/pratonosso/">Prato Nosso</a>
+    <a class="navbar-brand text-muted" href="/pratonosso/">Prato Nosso</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,9 +14,9 @@
               Olá, <?php  echo $_SESSION['user_name'] ?>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/pratonosso/perfil">Meu Perfil</a>
-              <a class="dropdown-item" href="/pratonosso/receitas/minhas-receitas">Minhas Receitas</a>
-              <a class="dropdown-item" href="/pratonosso/receitas/minhas-receitas">Nova Receita</a>
+              <!-- <a class="dropdown-item" href="/pratonosso/perfil">Meu Perfil</a> -->
+              <a class="dropdown-item" href="/pratonosso/minhas-receitas">Minhas Receitas</a>
+              <a class="dropdown-item" href="/pratonosso/receitas/criar">Nova Receita</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item text-danger" href="/pratonosso/session/delete">Sair</a>
             </div>
